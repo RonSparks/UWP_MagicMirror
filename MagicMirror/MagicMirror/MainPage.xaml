@@ -9,8 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Border BorderThickness="10,30,20,40" />
-        <TextBlock FontSize="30" Text="THIS IS A TEXTBLOCK" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Border BorderThickness="10,30,20,40">
+            <TextBlock FontSize="30" Text="THIS IS A TEXTBLOCK" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
 
     </Grid>
 </Page>

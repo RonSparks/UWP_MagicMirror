@@ -1,0 +1,1 @@
+C:\Users\Ron Spark\source\repos\UWP_MagicMirror\MagicMirror\MagicMirror\MagicMirror.csproj;x86
