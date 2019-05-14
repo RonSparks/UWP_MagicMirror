@@ -9,9 +9,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Border BorderThickness="10,30,20,40">
-            <TextBlock FontSize="30" Text="THIS IS A TEXTBLOCK" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        </Border>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
 
+      <TextBlock x:Name="txtHeader" Text="Hello" Grid.ColumnSpan="2"/>
+      
+        <Border BorderThickness="10,30,20,40" BorderBrush="Red" Grid.Row="1" Grid.Column="1">
+            <TextBlock FontSize="30" Text="{Binding IsSpinning}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+      <Button Content="Click me" Grid.Row="2" Click="Button_Click"/>
     </Grid>
 </Page>

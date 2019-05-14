@@ -22,9 +22,31 @@ namespace MagicMirror
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public string Name { get; set; } = "Gaurav";
+
+
+        public static readonly DependencyProperty IsSpinningProperty =
+    DependencyProperty.Register(
+        "IsSpinning", typeof(string),
+        typeof(MainPage), null
+    );
+        // The property wrapper, so that callers can use this property through a simple ExampleClassInstance.IsSpinning usage rather than requiring property system APIs
+        public string IsSpinning
+        {
+            get { return (string)GetValue(IsSpinningProperty); }
+            set { SetValue(IsSpinningProperty, value); }
+        }
+
         public MainPage()
         {
             this.InitializeComponent();
+            this.DataContext = this;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            txtHeader.Text = "I am the header";
+            IsSpinning = "Ron";
         }
     }
 }
