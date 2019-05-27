@@ -26,7 +26,6 @@ namespace MagicMirror
         public MainPage()
         {
             this.InitializeComponent();
-            this.DataContext = this;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
